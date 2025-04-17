@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #a18cd1);
+    font-family: 'Arial', sans-serif;
+    overflow: auto;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    min-height: 500px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.decor {
+    display: none;
+}
+
+h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2.5em;
+    color: #ff69b4;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.glorbo-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.glorbo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Медиа-запросы для адаптации */
+@media (min-width: 768px) {
+    .container {
+        padding: 40px;
+        height: 600px;
+    }
+    
+    .decor {
+        display: block;
+        position: absolute;
+        background: rgba(255, 182, 193, 0.2);
+        border-radius: 50%;
+    }
+
+    .decor:nth-child(1) {
+        width: 150px;
+        height: 150px;
+        top: -30px;
+        left: -30px;
+        animation: float 6s infinite;
+    }
+
+    .decor:nth-child(2) {
+        width: 100px;
+        height: 100px;
+        bottom: -20px;
+        right: -20px;
+        animation: float 5s infinite;
+    }
+
+    h1 {
+        font-size: 3.5em;
+    }
+
+    .message {
+        font-size: 1.2em;
+        padding: 0;
+    }
+
+    .glorbo-img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
